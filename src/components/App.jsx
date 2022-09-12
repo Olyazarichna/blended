@@ -15,7 +15,7 @@ function App() {
     dispatch(fetchUsers());
   };
 
-  const addUser = () => {
+  const showForm = () => {
     setIsShowForm(true);
   };
 
@@ -37,7 +37,7 @@ function App() {
       <UsersGallery />
       {users.length !== 0 && !isShowForm && (
         <>
-          <Button type="button" handleClick={addUser} content="Add user" />
+          <Button type="button" handleClick={showForm} content="Add user" />
         </>
       )}
       {isShowForm && <AddUserForm closeForm={hideForm} />}
